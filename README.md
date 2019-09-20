@@ -1,11 +1,20 @@
-[![Build status](https://api.travis-ci.org/meseven/node-egitimi-movie-api.svg)](https://travis-ci.org/meseven/node-egitimi-movie-api)
+# Node.js Mysql Rest Api
+Node.JS ES6 ile geliştirilmiş bir Rest Api projesidir. Veritabanı olarak MySQL kullanılmıştır. (Veritabanı kurulumu için adımları takip ediniz.)
 
-# node-egitimi-movie-api
-Udemy üzerinde yayınlanan ["Sıfırdan Her Yönüyle Node.JS"](http://bit.ly/ndjsm) adlı eğitim setinde "Express ve MongoDB ile Restful API Geliştirme Projesi" bölümünde kullanılan repodur.
+# Database Configuration
+Database olarak sık kullanılan Nordwind örnek veritabanı kullanılmıştır. Mysql için aşağıdaki repositoryi inceleyniz.
 
+[Mysql Nordwind Database](https://github.com/dalers/mywind)
 
-[![nodejs dersleri](https://mehmetseven.net/content/images/2017/12/nodejs-mehmet-seven.jpg)](http://bit.ly/ndjsm)
-
+```javascript
+const mysqlConnection = mysql.createConnection({
+    host: "localhost", 
+    user: "root",
+    password: "1",
+    database: "northwind",
+    port: "3306"
+});
+```
 
 # Movies
 
