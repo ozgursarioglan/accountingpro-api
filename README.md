@@ -16,38 +16,34 @@ const mysqlConnection = mysql.createConnection({
 });
 ```
 
-# Movies
+# Customers
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /api/movies | `GET` | Empty | List all movies. |
-| /api/movies | `POST` | {'title':'foo', 'category':'bar', 'country':'Turkey', year:1990, director:"id", imdb_score: 9.7 } | Create a new movie. |
-| /api/movies/:movie_id | `GET` | Empty | Get a movie. |
-| /api/movies/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |
-| /api/movies/:movie_id | `DELETE` | Empty | Delete a movie. |
-| /api/movies/top10 | `GET` | Empty | Get the top 10 movies. |
-| /api/movies/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |
+| /customers | `GET` | Empty | List all customers. |
+| /customers | `POST` | {company: 'A Company', first_name:'Özgür', lastname:'SARIOĞLAN' } | Create a new customer. |
+| /customers/:id | `GET` | Empty | Get a customer. |
+| /customers/:id | `PUT` | {company: 'B Company', first_name:'Ali', lastname:'SARIOĞLAN'} | Update a customer with new info. |
+| /customers/:id | `DELETE` | Empty | Delete a customer. |
 
-# Directors
 
-| Route | HTTP Verb	 | POST body	 | Description	 |
-| --- | --- | --- | --- |
-| /api/directors | `GET` | Empty | List all directors. |
-| /api/directors | `POST` | { name: 'foo', surname:'bar', bio:'lorem ipsum' } | Create a new director. |
-| /api/directors/:director_id | `GET` | Empty | Get a director. |
-| /api/directors/:director_id | `PUT` | {'name':'foo', 'surname':'bar', 'bio': 'lorem'} | Update a director with new info. |
-| /api/directors/:director_id | `DELETE` | Empty | Delete a director. |
-| /api/directors/:director_id/best10movie | `GET` | Empty | The director's top 10 films. |
-
-# Index
+# Other Endpoints
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /register | `POST` | { username: 'foo', password:'1234' } | Create a new user. |
-| /authenticate | `POST` | { username: 'foo', password:'1234' } | Generate a token. |
+| /customers | `GET` | Empty | List all customers. |
+| /customers/:id | `GET` | Empty | Get a customer. |
+| /employees | `GET` | Empty | List all employees. |
+| /employees/:id | `GET` | Empty | Get a employee. |
+| /invoices | `GET` | Empty | List all invoices. |
+| /invoices/:id | `GET` | Empty | Get a invoice. |
+| /orders | `GET` | Empty | List all orders. |
+| /orders/:id | `GET` | Empty | Get a order. |
+| /products | `GET` | Empty | List all products. |
+| /products/:id | `GET` | Empty | Get a product. |
 
 
 # Demo
 [Live demo on Heroku](https://node-egitimi-movie-api.herokuapp.com/)
 
-enjoy!
+iyi eğlenceler!
